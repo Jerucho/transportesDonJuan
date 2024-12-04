@@ -1,16 +1,91 @@
 ---
-
+import { Banner } from "../components/banner/Banner";
+import Navbar from "../components/navbar/navbar.astro";
+import banner from "../assets/Sin título-1 1.png";
+import { BannerHomeContent } from "../components/banner/BannerHome/BannerHomeContent";
+import { SolicitarCotizacion } from "../components/solicitar-cotizacion/SolicitarCotizacion";
+import { ContactInfo } from "../components/ContactInfo/ContactInfo";
+import Title from "../components/Title/Title.astro";
+import NuestrosServicios from "../components/NuestrosServicios/NuestrosServiciosSection.astro";
+import ChooseUs from "../components/ChooseUs/ChooseUs.astro";
+import Customers from "../components/Customers/Customers.astro";
+import Contact from "../components/Contact/Contact.astro";
+import Footer from "../components/Footer/Footer.astro";
+import WhatsAppBtn from "../components/WhatsAppBtn/WhatsAppBtn.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Transportes Don Juan</title>
+  </head>
+  <body>
+    <ContactInfo />
+    <Banner background_image={banner}>
+      <Navbar color="black" />
+      <BannerHomeContent />
+    </Banner>
+    <SolicitarCotizacion />
+    <NuestrosServicios />
+    <ChooseUs />
+    <Customers
+      customers={[
+        {
+          name: "Coca Cola",
+          logo: "https://brandemia.org/contenido/subidas/2023/01/logo-coca-cola-1941-1987-1024x576.png",
+        },
+        {
+          name: "Falabella",
+          logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkACmtMuOzXtOizbDCzDKy8sJLHGO_3FyxsQ&s",
+        },
+        {
+          name: "Sodimac",
+          logo: "https://cdn.worldvectorlogo.com/logos/sodimac-homecenter.svg",
+        },
+        {
+          name: "Adidas",
+          logo: "https://1000marcas.net/wp-content/uploads/2024/02/Adidas-Logo-1991.png",
+        },
+      ]}
+    />
+    <Contact />
+    <Footer />
+    <WhatsAppBtn />
+  </body>
+
+  <style>
+    body {
+      margin: 0;
+      padding-top: 100px;
+      padding: 0;
+      font-family: "Inter", sans-serif;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        scale: 0.5;
+      }
+      to {
+        opacity: 1;
+        scale: 1;
+      }
+    }
+  </style>
 </html>

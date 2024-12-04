@@ -1,0 +1,33 @@
+---
+import ButtonAction from "../Button/ButtonAction.astro";
+import Title from "../Title/Title.astro";
+type Customer = {
+  name: string;
+  logo: string;
+};
+const { customers } = Astro.props;
+
+import "../../styles/fadeInAnimation.css";
+---
+
+<section class="my-[100px] fadeIn">
+  <Title title="Algunos de nuestros clientes" />
+  <div class="flex flex-wrap justify-around">
+    {
+      customers?.map((client: Customer) => (
+        <div
+          class="p-5 rounded bg-gray-100 flex items-center justify-center h-52 w-52"
+          style={{
+            backgroundImage: `url(${client.logo})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        />
+      ))
+    }
+  </div>
+  <div class="text-center flex justify-center mt-10">
+    <ButtonAction text="¡Quiero ser parte!" href="/clientes" />
+  </div>
+</section>

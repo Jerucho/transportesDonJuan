@@ -1,0 +1,47 @@
+---
+import ButtonAction from "../Button/ButtonAction.astro";
+import { ServiceCardMini } from "../ServiceMiniCard/ServiceCardMini";
+import { faTruck } from "@fortawesome/free-solid-svg-icons";
+import Title from "../Title/Title.astro";
+---
+
+<section
+  style={{
+    margin: "100px 0",
+  }}
+>
+  <Title title="Nuestros Servicios" />
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      margin: "50px 0",
+      gap: "20px",
+    }}
+  >
+    <div
+      style={{
+        margin: "0 100px",
+        display: "flex",
+        justifyContent: "space-between",
+      }}
+    >
+      <ServiceCardMini
+        title="Transporte de Carga General"
+        description="Llevamos tus productos de manera segura y eficiente a cualquier destino."
+        icon={faTruck}
+      />
+      <ServiceCardMini
+        title="Transporte de Carga Especializada"
+        description="Contamos con la infraestructura necesaria para transportar cualquier tipo de carga."
+        icon={faTruck}
+      />
+      <ServiceCardMini
+        title="Transporte de Carga Refrigerada"
+        description="Transportamos productos perecederos a la temperatura adecuada."
+        icon={faTruck}
+      />
+    </div><ButtonAction text="Más información" href="" />
+  </div>
+</section>

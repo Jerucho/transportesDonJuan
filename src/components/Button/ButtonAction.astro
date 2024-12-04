@@ -1,0 +1,18 @@
+---
+const { href, text, icon } = Astro.props;
+---
+
+<a
+  style={{
+    padding: "10px 20px",
+    width: "auto",
+    height: "60px",
+    textDecoration: "none",
+
+    textAlign: "center",
+    marginTop: "20px",
+    cursor: "pointer",
+  }}
+  class="flex justify-center gap-5 items-center bg-verde text-blanco text-xl font-semibold rounded-lg shadow-md"
+  href={href}>{icon && <i class={`${icon} text-3xl`} />}{text}</a
+>

@@ -1,0 +1,85 @@
+---
+import Image from "astro/components/Image.astro";
+import logo from "../../assets/TRANSPORTE(DONJUAN)1.png";
+const { color = "light" } = Astro.props;
+---
+
+<nav>
+  <div>
+    <a href="/">
+      <Image
+        src={logo}
+        alt="Logo de Transportes Don Juan"
+        width="356"
+        height="100"
+        id="logo-transportes-don-juan"
+      />
+    </a>
+  </div>
+  <ul>
+    <li>
+      <a class={color == "light" ? "color_black" : "color_white"} href="/"
+        >Inicio</a
+      >
+    </li><li>
+      <a
+        class={color == "light" ? "color_black" : "color_white"}
+        href="/servicios">Servicios</a
+      >
+    </li><li>
+      <a
+        class={color == "light" ? "color_black" : "color_white"}
+        href="/sobre-nosotros">Sobre Nosotros</a
+      >
+    </li>
+    <li>
+      <a
+        class={color == "light" ? "color_black" : "color_white"}
+        href="/clientes">Clientes</a
+      >
+    </li>
+    <li>
+      <a class={color == "light" ? "color_black" : "color_white"} href="/"
+        >Contacto</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<style>
+  nav {
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+  }
+
+  .color_black {
+    color: black;
+    font-family: "inter";
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  .color_white {
+    color: white;
+    font-family: "inter";
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+
+  #logo-transportes-don-juan {
+    width: 356px;
+    height: 100px;
+    flex-shrink: 0;
+  }
+</style>
