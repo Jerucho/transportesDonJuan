@@ -21,11 +21,7 @@ import Title from "../Title/Title.astro";
     }}
   >
     <div
-      style={{
-        margin: "0 100px",
-        display: "flex",
-        justifyContent: "space-between",
-      }}
+      class="flex flex-col md:flex-row px-[5%] mx-[100px] gap-[20px] justify-between w-full"
     >
       <ServiceCardMini
         title="Transporte de Carga General"
@@ -42,6 +38,7 @@ import Title from "../Title/Title.astro";
         description="Transportamos productos perecederos a la temperatura adecuada."
         icon={faTruck}
       />
-    </div><ButtonAction text="Más información" href="" />
+    </div>
+    <ButtonAction text="Más información" href="" />
   </div>
 </section>

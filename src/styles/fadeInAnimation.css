@@ -14,3 +14,9 @@
   animation-timeline: view();
   animation-range: entry 0 cover 30%;
 }
+
+@media (max-width: 768px) {
+  .fadeIn {
+    animation-range: entry 0 cover 20%;
+  }
+}

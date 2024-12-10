@@ -15,6 +15,10 @@ export default {
         "10vh": "10vh",
         "5vh": "5vh",
       },
+      backgroundImage: {
+        sobreNosotros: "url('./src/assets/SobreNosotros.png')",
+        nuestraHistoria: "url('./src/assets/CamionNuestraHistoria.png')",
+      },
     },
   },
   plugins: [],

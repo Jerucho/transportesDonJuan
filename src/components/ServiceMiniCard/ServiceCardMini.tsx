@@ -15,10 +15,9 @@ export const ServiceCardMini = ({
   return (
     <>
       <div
-        className="flex justify-center items-center gap-10 p-10 fadeIn"
+        className="flex justify-center items-center gap-10 p-10 fadeIn w-[calc( 100% / 3)]"
         style={{
           boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-          width: "30%",
           height: "100%",
           minHeight: "250px",
           backgroundColor: "#FAFAFA",

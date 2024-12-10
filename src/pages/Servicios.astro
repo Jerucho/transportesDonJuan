@@ -1,0 +1,59 @@
+---
+import { Banner } from "../components/banner/Banner";
+import Navbar from "../components/navbar/navbar.astro";
+import banner from "../assets/CamionNuestrosServicios.png";
+import BannerServicios from "../components/banner/BannerServicios/BannerServicios.astro";
+import WebLayout from "../layouts/WebLayout.astro";
+import { ContactInfo } from "../components/ContactInfo/ContactInfo";
+import ServiceBigCard from "../components/ServiceBigCard/ServiceBigCard.astro";
+import Contact from "../components/Contact/Contact.astro";
+import Footer from "../components/Footer/Footer.astro";
+import WhatsAppBtn from "../components/WhatsAppBtn/WhatsAppBtn.astro";
+---
+
+<WebLayout title="Servicios | Transportes Don Juan">
+  <Banner backgound_position="object-center" background_image={banner}>
+    <Navbar color="black" />
+    <BannerServicios />
+  </Banner>
+  <ContactInfo />
+  <div class="px-[5%] my-[40px]">
+    <ServiceBigCard
+      title="Carga General"
+      img="/src/assets/fondoServicios1.webp"
+      text={`
+       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas omnis
+      repudiandae quos labore dolores unde maiores qui facere reprehenderit,
+      odit deleniti ex esse fuga a saepe quis voluptates deserunt cupiditate
+      velit inventore ratione? Molestiae possimus, labore minima consequuntur
+      nulla quaerat?
+      `}
+    />
+    <ServiceBigCard
+      title="Carga Corta y Larga Distancia"
+      img="/src/assets/fondoServicio2.webp"
+      text={`
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas omnis
+       repudiandae quos labore dolores unde maiores qui facere reprehenderit,
+       odit deleniti ex esse fuga a saepe quis voluptates deserunt cupiditate
+       velit inventore ratione? Molestiae possimus, labore minima consequuntur
+       nulla quaerat?
+       `}
+    />
+    <ServiceBigCard
+      title="Carga Paletizada"
+      img="/src/assets/fondoServicios3.webp"
+      text={`
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas omnis
+     repudiandae quos labore dolores unde maiores qui facere reprehenderit,
+     odit deleniti ex esse fuga a saepe quis voluptates deserunt cupiditate
+     velit inventore ratione? Molestiae possimus, labore minima consequuntur
+     nulla quaerat?
+     `}
+    />
+  </div>
+
+  <Contact />
+  <Footer />
+  <WhatsAppBtn />
+</WebLayout>

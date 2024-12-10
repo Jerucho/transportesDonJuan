@@ -1,0 +1,33 @@
+---
+import { Banner } from "../components/banner/Banner";
+import Navbar from "../components/navbar/navbar.astro";
+import WebLayout from "../layouts/WebLayout.astro";
+import banner from "../assets/Rectangle 52.png";
+import { SolicitarCotizacion } from "../components/solicitar-cotizacion/SolicitarCotizacion";
+import SobreNosotrosCard from "../components/SobreNosotrosCard/SobreNosotrosCard.astro";
+import Title from "../components/Title/Title.astro";
+import NuestraHistoria from "../components/NuestraHistoria/NuestraHistoria.astro";
+import Footer from "../components/Footer/Footer.astro";
+import WhatsAppBtn from "../components/WhatsAppBtn/WhatsAppBtn.astro";
+---
+
+<WebLayout>
+  <Banner backgound_position="object-center" background_image={banner}>
+    <Navbar color="black" />
+    <>
+      <div class="flex flex-col justify-center h-[80vh] px-[5%]">
+        <h1 class="text-5xl font-bold text-blanco md:text-6xl">
+          Sobre Nosotros
+        </h1>
+        <p class="max-w-[80%] mt-4 text-blanco text-3xl md:text-4xl">
+          Misión y Visión
+        </p>
+      </div>
+    </>
+  </Banner>
+  <SolicitarCotizacion />
+  <SobreNosotrosCard />
+  <NuestraHistoria />
+  <Footer />
+  <WhatsAppBtn />
+</WebLayout>

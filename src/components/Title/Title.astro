@@ -3,12 +3,7 @@ const { title, barColor, textColor } = Astro.props;
 import "../../styles/fadeInAnimation.css";
 ---
 
-<div
-  class="flex items-start p-4 fadeIn"
-  style={{
-    paddingLeft: "100px",
-  }}
->
+<div class="flex items-start p-4 fadeIn px-[5%] w-full">
   <div
     class=`${!barColor ? 'bg-azul' : barColor} mr-2 self-stretch`
     style={{

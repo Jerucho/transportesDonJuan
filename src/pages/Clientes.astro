@@ -1,0 +1,46 @@
+---
+import Image from "astro/components/Image.astro";
+import Title from "../components/Title/Title.astro";
+
+import falabella from "../assets/clientes/image 15.png";
+import sodimac from "../assets/clientes/image 16.png";
+import lego from "../assets/clientes/image 17.png";
+import adidas from "../assets/clientes/image 18.png";
+import WebLayout from "../layouts/WebLayout.astro";
+import Navbar from "../components/navbar/navbar.astro";
+import Footer from "../components/Footer/Footer.astro";
+---
+
+<WebLayout>
+  <Navbar />
+  <section
+    class="w-full flex flex-col pt-[400px] md:pt-[200px] h-auto mb-[200px]"
+  >
+    <Title title="Nuestros principales clientes" />
+    <div
+      class="flex w-full flex-wrap gap-[30px] md:gap-[50p] justify-center items-center md:justify-between md:px-[5%]"
+    >
+      <Image
+        src={falabella}
+        alt="Cliente Falabella"
+        class="w-[150px] md:w-[150px] h-auto"
+      />
+      <Image
+        src={sodimac}
+        alt="Cliente Sodimac"
+        class="w-[150px] md:w-[150px] h-auto"
+      />
+      <Image
+        src={lego}
+        alt="Cliente Lego"
+        class="w-[150px] md:w-[150px] h-auto"
+      />
+      <Image
+        src={adidas}
+        alt="Cliente Adidas"
+        class="w-[150px] md:w-[150px] h-auto"
+      />
+    </div>
+  </section>
+  <Footer />
+</WebLayout>

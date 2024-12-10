@@ -3,14 +3,18 @@ import ButtonAction from "../Button/ButtonAction.astro";
 import Title from "../Title/Title.astro";
 ---
 
-<section class="flex justify-between gap-5 bg-azul h-[50vh] py-20">
-  <div class="w-2/4">
+<section
+  class="flex flex-col md:flex-row justify-between gap-5 bg-azul h-auto md:h-[50vh] py-20"
+>
+  <div class="w-full md:w-2/4">
     <Title title="Contactanos" barColor="bg-blanco" textColor="text-blanco" />
-    <div class="mx-[100px] flex flex-col gap-[40px] mt-[40px]">
-      <h3 class="text-4xl text-blanco">
+    <div
+      class="px-[5%] md:px-0 md:mx-[100px] flex flex-col gap-[40px] mt-[40px]"
+    >
+      <h3 class="text-xl md:text-4xl text-blanco">
         <i class="fa-solid fa-phone"></i> +54 9 11 3049 1482
       </h3>
-      <h3 class="text-4xl text-blanco">
+      <h3 class="text-xl md:text-4xl text-blanco">
         <i class="fa-solid fa-envelope"></i> contacto@transportesdonjuan.com
       </h3>
       <ButtonAction
@@ -20,7 +24,7 @@ import Title from "../Title/Title.astro";
       />
     </div>
   </div>
-  <div class="w-2/4">
+  <div class="w-full md:w-2/4 flex justify-center">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.01671357811!2d-58.384150687672!3d-34.60373887284138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2spe!4v1732659465517!5m2!1ses!2spe"
       width="90%"

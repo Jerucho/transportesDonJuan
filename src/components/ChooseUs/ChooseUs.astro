@@ -2,11 +2,13 @@
 import "../../styles/fadeInAnimation.css";
 ---
 
-<section class="flex h-[70vh] mx-[100px] mt-[150px] fadeIn">
+<section
+  class="flex flex-col justify-center items-center md:flex-row h-[auto] gap-[20px] px-[5%] md:mx-[100px] md:mt-[150px] fadeIn"
+>
   <!-- Sección de la imagen -->
-  <div class="w-[50%] h-full">
+  <div class="w-full md:w-[50%] h-[auto] md:h-[80vh]">
     <div
-      class="w-full h-full rounded-md"
+      class="w-full h-[30vh] md:h-full rounded-md"
       style="
         background-image: url('/src/assets/operario.webp');
         background-size: cover;
@@ -17,13 +19,15 @@ import "../../styles/fadeInAnimation.css";
   </div>
 
   <!-- Sección del texto -->
-  <div class="w-[50%] h-full flex flex-col justify-center px-11">
-    <h2 class="text-5xl font-black text-azul mb-6">¿Por Qué Elegirnos?</h2>
+  <div class="w-full md:w-[50%] h-full flex flex-col justify-center md:px-11">
+    <h2 class="text-3xl md:text-5xl font-black text-azul mb-6">
+      ¿Por Qué Elegirnos?
+    </h2>
     <div class="w-full h-full flex flex-col justify-around">
       <!-- Primera Tarjeta -->
       <div class="shadow-md flex gap-5 items-center p-8 rounded bg-white">
         <div
-          class="shadow-xl rounded-full bg-verde h-20 w-20 text-center flex justify-center items-center text-xl text-blanco font-bold"
+          class="shadow-xl rounded-full bg-verde h-22 p-4 w-22 text-center flex justify-center items-center text-lg md:text-xl text-blanco font-bold"
         >
           +76%
         </div>
@@ -33,7 +37,7 @@ import "../../styles/fadeInAnimation.css";
       <!-- Segunda Tarjeta -->
       <div class="shadow-md flex gap-5 items-center p-8 rounded bg-white">
         <div
-          class="shadow-xl rounded-full bg-verde h-20 w-20 text-center flex justify-center items-center text-xl text-blanco font-bold"
+          class="shadow-xl rounded-full bg-verde h-22 p-4 w-22 text-center flex justify-center items-center text-lg md:text-xl text-blanco font-bold"
         >
           +64%
         </div>
@@ -43,7 +47,7 @@ import "../../styles/fadeInAnimation.css";
       <!-- Tercera Tarjeta -->
       <div class="shadow-md flex gap-5 items-center p-8 rounded bg-white">
         <div
-          class="shadow-xl rounded-full bg-verde h-20 w-20 text-center flex justify-center items-center text-xl text-blanco font-bold"
+          class="shadow-xl rounded-full bg-verde h-22 p-4 w-22 text-center flex justify-center items-center text-lg md:text-xl text-blanco font-bold"
         >
           +80%
         </div>

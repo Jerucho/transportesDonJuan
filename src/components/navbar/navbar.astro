@@ -4,7 +4,17 @@ import logo from "../../assets/TRANSPORTE(DONJUAN)1.png";
 const { color = "light" } = Astro.props;
 ---
 
-<nav>
+<nav
+  class="w-full flex justify-center items-center bg-blanco md:bg-opacity-0 absolute h-[100px] px-[5%]"
+>
+  <script type="module">
+    const burguer = document.getElementById("burguer");
+    const ul = document.querySelector("ul");
+
+    burguer?.addEventListener("click", () => {
+      ul?.classList.toggle("translate-x-[-120%]");
+    });
+  </script>
   <div>
     <a href="/">
       <Image
@@ -13,73 +23,45 @@ const { color = "light" } = Astro.props;
         width="356"
         height="100"
         id="logo-transportes-don-juan"
+        class="w-[100%]"
       />
     </a>
   </div>
-  <ul>
+  <div>
+    <button id="burguer" class="text-azul text-3xl md:hidden pl-[15px]"
+      ><i class="fa-solid fa-align-justify"></i></button
+    >
+  </div>
+  <ul
+    class="translate-x-[-120%] md:translate-x-0 absolute flex p-[30px] flex-col transition-all top-[100px] gap-[20px] md:gap-[30px] bg-azulClaro md:bg-opacity-0 md:justify-end md:p-0 w-full text-blanco md:flex-row md:relative md:top-0 md:text-xl"
+  >
     <li>
-      <a class={color == "light" ? "color_black" : "color_white"} href="/"
-        >Inicio</a
+      <a
+        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300 t`}
+        href="/">Inicio</a
       >
     </li><li>
       <a
-        class={color == "light" ? "color_black" : "color_white"}
-        href="/servicios">Servicios</a
+        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300 t`}
+        href="/Servicios">Servicios</a
       >
     </li><li>
       <a
-        class={color == "light" ? "color_black" : "color_white"}
-        href="/sobre-nosotros">Sobre Nosotros</a
+        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300 t`}
+        href="/SobreNosotros">Sobre Nosotros</a
       >
     </li>
     <li>
       <a
-        class={color == "light" ? "color_black" : "color_white"}
-        href="/clientes">Clientes</a
+        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300 t`}
+        href="/Clientes">Clientes</a
       >
     </li>
     <li>
-      <a class={color == "light" ? "color_black" : "color_white"} href="/"
-        >Contacto</a
+      <a
+        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300 t`}
+        href="/">Contacto</a
       >
     </li>
   </ul>
 </nav>
-
-<style>
-  nav {
-    padding: 0 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-  }
-
-  ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 30px;
-  }
-
-  .color_black {
-    color: black;
-    font-family: "inter";
-    text-decoration: none;
-    font-size: 1.2em;
-  }
-  .color_white {
-    color: white;
-    font-family: "inter";
-    text-decoration: none;
-    font-size: 1.2em;
-  }
-
-  #logo-transportes-don-juan {
-    width: 356px;
-    height: 100px;
-    flex-shrink: 0;
-  }
-</style>
