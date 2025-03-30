@@ -2,26 +2,17 @@
 const { title, img, text } = Astro.props;
 ---
 
-<div
-  class="h-[550px] w-full flex flex-col p-[10px] gap-[20px] rounded shadow-lg md:flex-row hover:shadow-xl duration-500 ease-in-out my-[100px]"
->
+<div class="w-full max-w-[400px] flex flex-col p-4 gap-4 rounded-lg shadow-lg hover:shadow-xl duration-500 ease-in-out my-6">
+  <!-- Imagen -->
   <div
     id="img"
-    class="h-[60%] rounded md:h-full md:w-[40%] md:hover:w-[45%] duration-500 ease-in-out"
-    style={{
-      backgroundImage: `url(${img})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-    }}
-  >
-  </div>
-  <div
-    id="txt"
-    class="h-[40%] md:h-full md:w-[60%] md:flex md:flex-col md:justify-center md:gap-[10px]"
-  >
-    <h3 class="text-2xl font-bold mb-[10px] md:text-3xl">{title}</h3>
-    <p class="md:text-xl md:pr-[50px]">
-      {text}
-    </p>
+    class="h-[200px] w-full rounded-t-lg bg-cover bg-center"
+    style={`background-image: url(${img})`}  
+  ></div>
+
+  <!-- Texto -->
+  <div id="txt" class="flex flex-col justify-between flex-1 p-4">
+    <h3 class="text-2xl font-bold mb-2">{title}</h3>
+    <p class="text-base">{text}</p>
   </div>
 </div>
