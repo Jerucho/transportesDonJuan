@@ -1,5 +1,12 @@
 ---
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Title from "../Title/Title.astro";
+import {
+  faCab,
+  faCalendar,
+  faTruckFast,
+} from "@fortawesome/free-solid-svg-icons";
+import Testimonio from "../Testimonio/Testimonio.astro";
 ---
 
 <div class="mt-[100px]">
@@ -12,28 +19,48 @@ import Title from "../Title/Title.astro";
       id="txt"
       class="w-full md:w-1/2 flex flex-col gap-6 md:gap-8 text-base md:text-lg leading-relaxed"
     >
-      <p>
-        Transporte Don Juan S.A. es una empresa familiar con amplia experiencia
-        en el sector del transporte de cargas. Desde nuestros inicios, nos hemos
-        caracterizado por ofrecer un servicio confiable, seguro y eficiente.
+      <p
+        class="text-justify text-gray-700 dark:text-gray-300 text-sm md:text-xl"
+      >
+        En <strong>Transporte Don Juan S.A.</strong> somos una empresa familiar con
+        una larga trayectoria en el transporte de cargas. Desde el primer día, nos
+        destacamos por brindar un servicio confiable, seguro y eficiente.
       </p>
-      <p>
-        A lo largo de los años, hemos construido una sólida reputación basada en
-        la puntualidad, responsabilidad y el compromiso con nuestros clientes,
-        convirtiéndonos en un socio estratégico para sus operaciones logísticas.
+
+      <p
+        class="text-justify text-gray-700 dark:text-gray-300 text-sm md:text-xl"
+      >
+        Con el paso del tiempo, hemos consolidado una reputación basada en la
+        <strong>puntualidad</strong>, la <strong>responsabilidad</strong> y el
+        <strong>compromiso</strong> con cada uno de nuestros clientes. Hoy, somos
+        un aliado estratégico en sus operaciones logísticas.
       </p>
-      <p>
-        Contamos con una flota moderna y personal altamente capacitado, lo que
-        nos permite garantizar la calidad de nuestros servicios y la
-        satisfacción de nuestros clientes.
+
+      <p
+        class="text-justify text-gray-700 dark:text-gray-300 text-sm md:text-xl"
+      >
+        Disponemos de una flota moderna y un equipo altamente capacitado. Esto
+        nos permite garantizar un servicio de calidad y asegurar la
+        <strong>satisfacción total</strong> de quienes confían en nosotros.
       </p>
+
+      <!-- Llamada a la acción -->
+      <div class="mt-6 flex justify-center md:justify-start">
+        <a
+          href="#"
+          class="bg-azulClaro text-[#fff] py-3 px-8 rounded-lg hover:bg-azulClaro/90 transition duration-300"
+        >
+          Conoce nuestros servicios
+        </a>
+      </div>
     </div>
 
     <!-- Imagen -->
     <div
       id="camion"
-      class="w-full md:w-1/2 h-[250px] md:h-[500px] bg-nuestraHistoria bg-center bg-cover rounded-lg shadow-md"
+      class="w-full md:w-1/2 h-[250px] md:h-[500px] bg-nuestraHistoria bg-center bg-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out hover:scale-105"
     >
     </div>
   </section>
+  <Testimonio />
 </div>

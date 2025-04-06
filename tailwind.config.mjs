@@ -17,7 +17,7 @@ export default {
       },
       backgroundImage: {
         sobreNosotros: "url('./src/assets/SobreNosotros.png')",
-        nuestraHistoria: "url('./src/assets/CamionNuestraHistoria.png')",
+        nuestraHistoria: "url('./src/assets/CamionNuestraHistoria.jpeg')",
       },
     },
   },
