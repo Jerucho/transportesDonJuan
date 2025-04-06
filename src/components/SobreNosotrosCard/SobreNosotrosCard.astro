@@ -1,36 +1,39 @@
 ---
+// Componente padre
 import SobreNosotrosItem from "./SobreNosotrosItem.astro";
 ---
 
 <section
-  class="w-full h-[auto] flex flex-col md:flex-row md:h-[80vh] px-[5%] mt-[100px]"
+  class="w-full flex flex-col md:flex-row mt-[100px] h-auto md:h-[80vh] px-[5%]"
 >
+  <!-- Imagen a la izquierda -->
   <div
-    id="bg"
-    class="w-full h-1/2 bg-sobreNosotros bg-center bg-cover md:h-full md:w-1/2"
+    class="w-full md:w-1/2 h-[300px] md:h-full bg-sobreNosotros bg-center bg-cover"
   >
   </div>
-  <div id="items" class="w-full h-1/2 md:h-full md:w-1/2">
-    <div class="p-[5%] md:flex md:gap-[30px] md:flex-wrap">
+
+  <!-- Cards a la derecha -->
+  <div class="w-full md:w-1/2 flex items-center justify-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 w-full h-full">
       <SobreNosotrosItem
         icon="fa-solid fa-shield"
         title="Seguridad"
-        text="Ofrecemos seguridad a todos nuestros clientes, brindandoles apoyo y soporte en todo momento."
+        text="Ofrecemos seguridad a todos nuestros clientes, brindándoles apoyo y soporte en todo momento."
       />
       <SobreNosotrosItem
         icon="fa-solid fa-bolt"
         title="Velocidad"
-        text="Una rapida atencion a todos nuestros clientes, eso nos hace diferentes."
+        text="Una rápida atención a todos nuestros clientes, eso nos hace diferentes."
       />
       <SobreNosotrosItem
         icon="fa-solid fa-location-pin"
         title="Precisión"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id purus sed orci auctor rutrum non quis odio."
+        text="Contamos con seguimiento puntual para garantizar entregas en tiempo y forma."
       />
       <SobreNosotrosItem
         icon="fa-solid fa-headset"
         title="Soporte"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id purus sed orci auctor rutrum non quis odio."
+        text="Atención personalizada y acompañamiento constante a cada cliente."
       />
     </div>
   </div>

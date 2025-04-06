@@ -13,6 +13,8 @@ import Contact from "../components/Contact/Contact.astro";
 import Footer from "../components/Footer/Footer.astro";
 import WhatsAppBtn from "../components/WhatsAppBtn/WhatsAppBtn.astro";
 import WebLayout from "../layouts/WebLayout.astro";
+import SobreNosotrosCard from "../components/SobreNosotrosCard/SobreNosotrosCard.astro";
+import NuestraHistoria from "../components/NuestraHistoria/NuestraHistoria.astro";
 ---
 
 <WebLayout title="Tranportes Don Juan">
@@ -23,8 +25,9 @@ import WebLayout from "../layouts/WebLayout.astro";
   </Banner>
   <SolicitarCotizacion />
   <NuestrosServicios />
+  <NuestraHistoria />
   <ChooseUs />
-  <Customers
+  <!-- <Customers
     customers={[
       {
         name: "Coca Cola",
@@ -43,7 +46,7 @@ import WebLayout from "../layouts/WebLayout.astro";
         logo: "https://1000marcas.net/wp-content/uploads/2024/02/Adidas-Logo-1991.png",
       },
     ]}
-  />
+  /> -->
   <Contact />
   <Footer />
   <WhatsAppBtn />
