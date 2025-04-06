@@ -5,7 +5,8 @@ const { color = "light" } = Astro.props;
 ---
 
 <nav
-  class="w-full flex justify-center items-center bg-azul h-[100px] px-[5%] sticky top-0 z-50"
+  class="w-full flex justify-center items-center h-[100px] px-[5%] absolute top-0 z-50 transition-all duration-300"
+  id="navbar"
 >
   <script type="module">
     const burguer = document.getElementById("burguer");
@@ -14,7 +15,25 @@ const { color = "light" } = Astro.props;
     burguer?.addEventListener("click", () => {
       ul?.classList.toggle("translate-x-[-120%]");
     });
+
+    const navbar = document.getElementById("navbar");
+
+    // Función para cambiar el fondo del navbar cuando se hace scroll
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        navbar.classList.add("fixed"); // Cambiar a fixed en lugar de sticky
+        navbar.classList.add("bg-azul"); // Cambiar a fondo sólido
+        navbar.classList.add("shadow-lg"); // Añadir sombra
+        navbar.classList.remove("absolute"); // Cambiar a fixed
+      } else {
+        navbar.classList.remove("bg-azul"); // Fondo transparente al inicio
+        navbar.classList.remove("shadow-lg"); // Eliminar sombra
+        navbar.classList.add("absolute"); // Volver a posición absolute
+        navbar.classList.remove("fixed"); // Volver a posición absolute
+      }
+    });
   </script>
+
   <div>
     <a href="/">
       <Image
@@ -27,33 +46,37 @@ const { color = "light" } = Astro.props;
       />
     </a>
   </div>
+
   <div>
-    <button id="burguer" class="text-azul text-3xl md:hidden pl-[15px]"
-      ><i class="fa-solid fa-align-justify"></i></button
-    >
+    <button id="burguer" class="text-blanco text-3xl md:hidden pl-[15px]">
+      <i class="fa-solid fa-align-justify"></i>
+    </button>
   </div>
+
   <ul
-    class="translate-x-[-120%] md:translate-x-0 absolute flex p-[30px] flex-col transition-all top-[100px] gap-[20px] md:gap-[30px] bg-azulClaro md:bg-opacity-0 md:justify-end md:p-0 w-full text-blanco md:flex-row md:relative md:top-0 md:text-xl"
+    class="translate-x-[-120%] md:translate-x-0 absolute flex p-[30px] flex-col transition-all top-[100px] gap-[20px] md:gap-[30px] bg-azul md:bg-opacity-0 md:justify-end md:p-0 w-full text-blanco md:flex-row md:relative md:top-0 md:text-xl"
   >
     <li>
       <a
-        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300 t`}
+        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300`}
         href="/">Inicio</a
       >
-    </li><li>
+    </li>
+    <li>
       <a
-        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300 t`}
+        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300`}
         href="/Servicios">Servicios</a
       >
-    </li><li>
+    </li>
+    <li>
       <a
-        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300 t`}
+        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300`}
         href="/SobreNosotros">Sobre Nosotros</a
       >
     </li>
     <li>
       <a
-        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300 t`}
+        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300`}
         href="/">Contacto</a
       >
     </li>
