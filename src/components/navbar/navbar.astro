@@ -5,7 +5,7 @@ const { color = "light" } = Astro.props;
 ---
 
 <nav
-  class="w-full flex justify-center items-center bg-blanco md:bg-opacity-0 absolute h-[100px] px-[5%]"
+  class="w-full flex justify-center items-center bg-azul h-[100px] px-[5%] sticky top-0 z-50"
 >
   <script type="module">
     const burguer = document.getElementById("burguer");
@@ -49,12 +49,6 @@ const { color = "light" } = Astro.props;
       <a
         class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300 t`}
         href="/SobreNosotros">Sobre Nosotros</a
-      >
-    </li>
-    <li>
-      <a
-        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300 t`}
-        href="/Clientes">Clientes</a
       >
     </li>
     <li>
