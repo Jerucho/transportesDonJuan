@@ -1,7 +1,11 @@
 ---
 import ButtonAction from "../Button/ButtonAction.astro";
 import { ServiceCardMini } from "../ServiceMiniCard/ServiceCardMini";
-import { faTruck } from "@fortawesome/free-solid-svg-icons";
+import {
+  faTruck,
+  faRoute,
+  faBoxesStacked,
+} from "@fortawesome/free-solid-svg-icons";
 import Title from "../Title/Title.astro";
 ---
 
@@ -24,19 +28,19 @@ import Title from "../Title/Title.astro";
       class="flex flex-col md:flex-row px-[5%] mx-[100px] gap-[20px] justify-between w-full"
     >
       <ServiceCardMini
-        title="Transporte de Carga General"
-        description="Llevamos tus productos de manera segura y eficiente a cualquier destino."
+        title="Transporte Nacional"
+        description="Servicio de transporte de cargas generales a nivel nacional, con cobertura en las principales rutas del país."
         icon={faTruck}
       />
       <ServiceCardMini
-        title="Transporte de Carga Especializada"
-        description="Contamos con la infraestructura necesaria para transportar cualquier tipo de carga."
-        icon={faTruck}
+        title="Carga Paletizada"
+        description="Especialistas en el transporte de mercadería paletizada, asegurando la integridad de su carga durante todo el trayecto."
+        icon={faBoxesStacked}
       />
       <ServiceCardMini
-        title="Transporte de Carga Refrigerada"
-        description="Transportamos productos perecederos a la temperatura adecuada."
-        icon={faTruck}
+        title="Corta y Larga Distancia"
+        description="Servicios de transporte para distancias cortas y largas, adaptándonos a las necesidades específicas de cada cliente."
+        icon={faRoute}
       />
     </div>
     <ButtonAction text="Más información" href="" />
