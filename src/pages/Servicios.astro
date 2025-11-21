@@ -14,36 +14,60 @@ import fondo2 from "../assets/fondoServicio2.webp";
 import fondo3 from "../assets/fondoServicios3.webp";
 ---
 
-<WebLayout title="Servicios | Transportes Don Juan"
+<WebLayout 
+  title="Servicios de Transporte de Cargas | Transportes Don Juan - Transporte Nacional, Paletizado y Logística"
+  description="Conocé todos nuestros servicios de transporte en Argentina: transporte nacional, carga paletizada y servicios de corta y larga distancia. Transportes Don Juan, tu socio logístico de confianza."
+  keywords="servicios transporte cargas, transporte nacional Argentina, carga paletizada, transporte corta distancia, transporte larga distancia, logística Argentina, fletes nacionales"
   ><Navbar color="black" />
   <Banner background_position="object-center" background_image={banner.src}>
     <BannerServicios />
   </Banner>
 
   <ContactInfo />
-  <div class="my-[40px] flex gap-4 justify-center px-[5%] flex-col md:flex-row">
-    <ServiceBigCard
-      title="Transporte Nacional"
-      img={fondo1.src}
-      text={`
-       Con Transportes Don Juan podés contar con un servicio de transporte nacional ágil y confiable. Cubrimos todo el país, llevando tus productos de manera segura y eficiente a cualquier rincón de Argentina. Desde Buenos Aires hasta las provincias más alejadas, aseguramos la entrega puntual de tu carga. ¡Cuidamos tu mercancía como si fuera nuestra!
-      `}
-    />
-    <ServiceBigCard
-      title="Carga Paletizada"
-      img={fondo2.src}
-      text={`
-       Transportamos tu carga paletizada con total confianza. Sabemos lo importante que es que tus productos lleguen a destino en perfecto estado, por eso brindamos un servicio especializado para este tipo de carga. Con Transportes Don Juan, tu mercadería será manejada con el mayor cuidado, optimizando tiempos y costos. ¡Hacemos que todo llegue a tiempo y sin sorpresas!
- `}
-    />
-    <ServiceBigCard
-      title="Corta y Larga Distancia"
-      img={fondo3.src}
-      text={`
-      Transportamos tu carga paletizada con total confianza. Sabemos lo importante que es que tus productos lleguen a destino en perfecto estado, por eso brindamos un servicio especializado para este tipo de carga. Con Transportes Don Juan, tu mercadería será manejada con el mayor cuidado, optimizando tiempos y costos. ¡Hacemos que todo llegue a tiempo y sin sorpresas!
-     `}
-    />
-  </div>
+  
+  <!-- Sección de Servicios -->
+  <section class="py-20 md:py-28 lg:py-32 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative overflow-hidden">
+    <!-- Elementos decorativos de fondo -->
+    <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-azul/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-azulClaro/5 rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+      <!-- Título de sección opcional -->
+      <div class="text-center mb-12 md:mb-16 lg:mb-20">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          Nuestros Servicios de Transporte
+        </h1>
+        <div class="w-24 h-1 bg-gradient-to-r from-azul to-azulClaro mx-auto rounded-full"></div>
+      </div>
+      
+      <!-- Layout flexible y moderno - Cards horizontales -->
+      <div class="flex flex-col gap-8 md:gap-10 lg:gap-12">
+        <ServiceBigCard
+          title="Transporte Nacional en Argentina"
+          img={fondo1.src}
+          text={`
+           Con Transportes Don Juan podés contar con un servicio de transporte nacional ágil y confiable. Cubrimos todo el país, llevando tus productos de manera segura y eficiente a cualquier rincón de Argentina. Desde Buenos Aires hasta las provincias más alejadas, aseguramos la entrega puntual de tu carga. Nuestra experiencia en rutas nacionales te garantiza que tu mercadería llegue a destino en tiempo y forma. ¡Cuidamos tu mercancía como si fuera nuestra!
+          `}
+        />
+        <ServiceBigCard
+          title="Carga Paletizada Especializada"
+          img={fondo2.src}
+          text={`
+           Transportamos tu carga paletizada con total confianza y profesionalismo. Sabemos lo importante que es que tus productos lleguen a destino en perfecto estado, por eso brindamos un servicio especializado para este tipo de carga. Con Transportes Don Juan, tu mercadería será manejada con el mayor cuidado, optimizando tiempos y costos. Contamos con la experiencia y los recursos necesarios para garantizar la integridad de tus pallets. ¡Hacemos que todo llegue a tiempo y sin sorpresas!
+         `}
+        />
+        <ServiceBigCard
+          title="Corta y Larga Distancia"
+          img={fondo3.src}
+          text={`
+          Ofrecemos servicios de transporte adaptados tanto para distancias cortas como largas en toda Argentina. Nuestra flota moderna y experiencia nos permiten optimizar cada viaje, garantizando eficiencia y puntualidad. Ya sea un envío local dentro de Buenos Aires o un transporte interprovincial, nos adaptamos a tus necesidades logísticas con la misma dedicación y profesionalismo. Cotizá tu envío sin cargo.
+         `}
+        />
+      </div>
+    </div>
+  </section>
 
   <Contact />
   <Footer />

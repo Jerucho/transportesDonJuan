@@ -4,15 +4,9 @@ const { href, text, icon } = Astro.props;
 
 <a
   style={{
-    padding: "10px 20px",
-    width: "auto",
-    height: "60px",
     textDecoration: "none",
-
-    textAlign: "center",
-    marginTop: "20px",
     cursor: "pointer",
   }}
-  class="flex justify-center gap-5 items-center bg-verde text-blanco text-xl font-semibold rounded-lg shadow-md"
-  href={href}>{icon && <i class={`${icon} text-3xl`} />}{text}</a
+  class="inline-flex justify-center gap-2.5 items-center bg-verde text-blanco text-sm md:text-base font-semibold rounded-lg shadow-md px-5 py-2.5 md:px-7 md:py-3.5 hover:opacity-90 transition-opacity"
+  href={href}>{icon && <i class={`${icon} text-lg md:text-xl`} />}{text}</a
 >

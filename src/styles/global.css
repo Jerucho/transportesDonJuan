@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 14.4px; /* 90% de 16px */
+    line-height: 1.6;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 15px; /* Ligeramente más grande en tablets */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 15.2px; /* Ligeramente más grande en desktop */
+    }
+  }
+
+  body {
+    @apply font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Mejorar espaciado general */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Contenedor principal con mejor espaciado */
+  .container-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-main {
+      padding: 0 2.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-main {
+      padding: 0 4rem;
+    }
+  }
+}
+
+@layer utilities {
+  /* Espaciados más consistentes - reducidos al 90% */
+  .section-spacing {
+    @apply py-10 md:py-14 lg:py-16;
+  }
+
+  .section-spacing-top {
+    @apply pt-10 md:pt-14 lg:pt-16;
+  }
+
+  .section-spacing-bottom {
+    @apply pb-10 md:pb-14 lg:pb-16;
+  }
+
+  /* Utilidad para truncar texto con ellipsis */
+  .line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+

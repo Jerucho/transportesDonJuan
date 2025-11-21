@@ -2,18 +2,78 @@
 const { title, img, text } = Astro.props;
 ---
 
-<div class="w-full max-w-[400px] flex flex-col p-4 gap-4 rounded-lg shadow-lg hover:shadow-xl duration-500 ease-in-out my-6 md:max-w-[500px] lg:max-w-[600px]">
-  <!-- Imagen -->
-  <div
-    id="img"
-    class="h-[200px] w-full rounded-t-lg bg-cover bg-center md:h-[200px] lg:h-[250px]"
-    style={`background-image: url(${img})`}
-  ></div>
-
-  <!-- Texto -->
-  <div id="txt" class="flex flex-col justify-between flex-1 p-4">
-    <h3 class="text-2xl font-bold mb-2 md:text-2xl ">{title}</h3>
-    <p class="text-base md:text-lg ">{text}</p>
+<article class="relative w-full bg-white rounded-3xl overflow-hidden shadow-lg flex flex-col md:flex-row">
+  <!-- Contenedor de imagen con efectos modernos -->
+  <div class="relative w-full md:w-[45%] lg:w-[40%] h-[240px] md:h-auto min-h-[250px] overflow-hidden">
+    <!-- Imagen de fondo -->
+    <div
+      class="absolute inset-0 bg-cover bg-center"
+      style={`background-image: url(${img})`}
+    ></div>
+    
+    <!-- Patrón decorativo -->
+    <div class="absolute top-0 left-0 w-full h-32 md:h-24 bg-gradient-to-b from-white/10 to-transparent"></div>
+    
+    <!-- Línea decorativa vertical izquierda -->
+    <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-white/50 to-transparent hidden md:block"></div>
+    
+    <!-- Línea decorativa horizontal inferior (móvil) -->
+    <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/50 to-transparent md:hidden"></div>
+    
+    <!-- Título sobre la imagen (solo móvil) -->
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:hidden">
+      <div class="flex items-center gap-3 mb-2">
+        <div class="w-1.5 h-12 bg-gradient-to-b from-white via-white/80 to-transparent rounded-full"></div>
+        <h3 class="text-xl font-bold text-white leading-tight drop-shadow-lg">
+          {title}
+        </h3>
+      </div>
+    </div>
   </div>
-</div>
+
+  <!-- Contenido principal -->
+  <div class="w-full md:w-[55%] lg:w-[60%] p-6 md:p-7 lg:p-8 flex flex-col flex-1 bg-gradient-to-br from-white via-gray-50/30 to-white justify-center">
+    <!-- Título (solo desktop) -->
+    <div class="hidden md:block mb-4">
+      <div class="flex items-center gap-2 mb-3">
+        <div class="w-1.5 h-10 bg-gradient-to-b from-azul via-azulClaro to-transparent rounded-full"></div>
+        <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
+          {title}
+        </h3>
+      </div>
+    </div>
+
+    <!-- Badge decorativo superior -->
+    <div class="flex items-center gap-2 mb-4">
+      <div class="h-px flex-1 bg-gradient-to-r from-azul/30 via-azul to-azul/30"></div>
+      <div class="w-2.5 h-2.5 rounded-full bg-azul shadow-lg shadow-azul/30"></div>
+      <div class="h-px flex-1 bg-gradient-to-r from-azul/30 via-azul to-azul/30"></div>
+    </div>
+
+    <!-- Texto descriptivo -->
+    <div class="flex-1 mb-4">
+      <p class="text-gray-700 text-sm md:text-base lg:text-lg leading-relaxed font-light">
+        {text}
+      </p>
+    </div>
+
+    <!-- Footer con indicador de acción -->
+    <div class="pt-4 border-t border-gray-200/50">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2 text-azul">
+          <span class="text-sm font-semibold uppercase tracking-wide">Descubrir más</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+        </div>
+        <div class="flex gap-1">
+          <div class="w-2 h-2 rounded-full bg-azul"></div>
+          <div class="w-2 h-2 rounded-full bg-azul"></div>
+          <div class="w-2 h-2 rounded-full bg-azul"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</article>
 

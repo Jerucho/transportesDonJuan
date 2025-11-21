@@ -1,42 +1,93 @@
 ---
-import ButtonAction from "../Button/ButtonAction.astro";
 import Title from "../Title/Title.astro";
 ---
 
-<section class="bg-azul py-12 md:py-20">
-  <Title title="Contactanos" barColor="bg-blanco" textColor="text-blanco" />
-  <div class="flex flex-col md:flex-row justify-between gap-10">
-    <!-- Contact Section -->
-    <div class="w-full md:w-2/4 px-4 md:px-0 md:mx-[5%] flex flex-col gap-8">
-      <div class="flex flex-col gap-5 mt-8">
-        <!-- Phone Number -->
-        <h3 class="text-xl md:text-3xl text-blanco flex items-center gap-2">
-          <i class="fa-solid fa-phone"></i> +54 9 11 3049 1482
-        </h3>
-        <!-- Email Address -->
-        <h3 class="text-xl md:text-3xl text-blanco flex items-center gap-2">
-          <i class="fa-solid fa-envelope"></i> contacto@transportesdonjuan.com
-        </h3>
-        <!-- WhatsApp Button -->
-        <ButtonAction
-          icon="fa-brands fa-whatsapp"
-          text="WhatsApp"
-          href="https://www.google.com"
-        />
-      </div>
+<section class="py-16 md:py-20 lg:py-24 bg-white">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="text-center mb-12 md:mb-16">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        Contactanos
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-azul to-azulClaro mx-auto rounded-full"></div>
+      <p class="text-gray-600 text-base md:text-lg mt-6 max-w-2xl mx-auto">
+        Estamos para ayudarte. Contactanos por cualquiera de estos medios y te responderemos a la brevedad.
+      </p>
     </div>
 
-    <!-- Map Section -->
-    <div class="w-full md:w-2/4 flex justify-center px-4 md:px-0">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.01671357811!2d-58.384150687672!3d-34.60373887284138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2spe!4v1732659465517!5m2!1ses!2spe"
-        width="100%"
-        height="100%"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        class="rounded-lg shadow-lg"
-      >
-      </iframe>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      <!-- Información de Contacto -->
+      <div class="space-y-6">
+        <!-- Teléfono -->
+        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-azulClaro/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-phone text-azulClaro text-xl"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-gray-900 font-semibold text-lg mb-1">Teléfono</h3>
+              <a href="tel:+5491130491482" class="text-azul hover:text-azulClaro transition-colors text-base md:text-lg">
+                +54 9 11 3049 1482
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-azulClaro/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-envelope text-azulClaro text-xl"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-gray-900 font-semibold text-lg mb-1">Email</h3>
+              <a href="mailto:dj@transportesdonjuan.com" class="text-azul hover:text-azulClaro transition-colors text-base md:text-lg break-all">
+                dj@transportesdonjuan.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-verde/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fa-brands fa-whatsapp text-verde text-xl"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-gray-900 font-semibold text-lg mb-3">WhatsApp</h3>
+              <a
+                href="https://wa.me/5491130491482?text=Hola%20quiero%20solicitar%20una%20cotización"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 bg-verde text-blanco px-6 py-3 rounded-xl font-semibold hover:bg-verde/90 transition-colors shadow-lg hover:shadow-xl"
+              >
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>Escribinos por WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mapa -->
+      <div class="w-full">
+        <div class="bg-white rounded-2xl p-4 shadow-lg overflow-hidden">
+          <h3 class="text-gray-900 font-semibold text-lg mb-4 px-2">Nuestra Ubicación</h3>
+          <div class="relative w-full h-[400px] md:h-[450px] lg:h-[500px] rounded-xl overflow-hidden shadow-2xl">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.01671357811!2d-58.384150687672!3d-34.60373887284138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2spe!4v1732659465517!5m2!1ses!2spe"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

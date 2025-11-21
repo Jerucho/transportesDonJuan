@@ -2,12 +2,24 @@
 const { icon, title, text } = Astro.props;
 ---
 
-<div
-  class="w-full h-auto md:h-[250px] flex flex-col gap-4 border border-[#eeeeee] rounded-lg p-6 shadow-sm transition hover:shadow-md"
->
-  <i class={`${icon} text-4xl text-azulClaro`}></i>
-  <h3 class="text-xl font-bold">{title}</h3>
-  <p class="text-gray-600 text-sm">
-    {text}
-  </p>
+<div class="group relative w-full flex flex-col gap-4 bg-white rounded-2xl p-6 md:p-7 shadow-md hover:shadow-xl transition-all duration-300">
+  <!-- Línea decorativa superior -->
+  <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-azul via-azulClaro to-azul opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-2xl"></div>
+  
+  <!-- Contenedor del ícono -->
+  <div class="relative">
+    <div class="w-14 h-14 bg-gradient-to-br from-azul/10 to-azulClaro/10 rounded-xl flex items-center justify-center group-hover:from-azul/20 group-hover:to-azulClaro/20 transition-all duration-300">
+      <i class={`${icon} text-2xl text-azul group-hover:text-azulClaro transition-colors duration-300`}></i>
+    </div>
+  </div>
+  
+  <!-- Contenido -->
+  <div class="flex-1 flex flex-col gap-3">
+    <h3 class="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-azul transition-colors duration-300">
+      {title}
+    </h3>
+    <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+      {text}
+    </p>
+  </div>
 </div>

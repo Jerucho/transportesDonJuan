@@ -3,58 +3,54 @@ import Title from "../Title/Title.astro";
 import camionImg from "../../assets/CamionNuestraHistoria.jpeg";
 ---
 
-<div class="mt-[100px]">
-  <Title title="Nuestra Historia" />
-  <section
-    class="flex flex-col-reverse md:flex-row items-center justify-center gap-8 px-[5%] py-10"
-  >
-    <!-- Texto -->
-    <div
-      id="txt"
-      class="w-full md:w-1/2 flex flex-col gap-6 md:gap-8 text-base md:text-lg leading-relaxed"
-    >
-      <p
-        class="text-justify text-gray-700 dark:text-gray-300 text-sm md:text-xl"
-      >
-        En <strong>Transporte Don Juan S.A.</strong> somos una empresa familiar con
-        una larga trayectoria en el transporte de cargas. Desde el primer día, nos
-        destacamos por brindar un servicio confiable, seguro y eficiente.
-      </p>
+<div class="py-16 md:py-20 lg:py-24 bg-white">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="text-center mb-12 md:mb-16">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        Nuestra Historia
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-azul to-azulClaro mx-auto rounded-full"></div>
+    </div>
+    
+    <section class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+      <!-- Texto -->
+      <div class="w-full lg:w-1/2 flex flex-col gap-6">
+        <div class="space-y-5">
+          <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+            En <strong class="text-azul">Transportes Don Juan S.A.</strong> somos una empresa familiar con una larga trayectoria en el transporte de cargas en Argentina. Desde nuestros inicios, nos destacamos por brindar un servicio confiable, seguro y eficiente que conecta todo el país.
+          </p>
 
-      <p
-        class="text-justify text-gray-700 dark:text-gray-300 text-sm md:text-xl"
-      >
-        Con el paso del tiempo, hemos consolidado una reputación basada en la
-        <strong>puntualidad</strong>, la <strong>responsabilidad</strong> y el
-        <strong>compromiso</strong> con cada uno de nuestros clientes. Hoy, somos
-        un aliado estratégico en sus operaciones logísticas.
-      </p>
+          <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+            Con el paso del tiempo, hemos consolidado una reputación sólida basada en la <strong class="text-azul">puntualidad</strong>, la <strong class="text-azul">responsabilidad</strong> y el <strong class="text-azul">compromiso</strong> con cada uno de nuestros clientes. Hoy, somos un aliado estratégico en sus operaciones logísticas, ayudándolos a crecer y expandirse por todo el territorio nacional.
+          </p>
 
-      <p
-        class="text-justify text-gray-700 dark:text-gray-300 text-sm md:text-xl"
-      >
-        Disponemos de una flota moderna y un equipo altamente capacitado. Esto
-        nos permite garantizar un servicio de calidad y asegurar la
-        <strong>satisfacción total</strong> de quienes confían en nosotros.
-      </p>
+          <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+            Disponemos de una flota moderna y un equipo altamente capacitado que conoce cada ruta de Argentina. Esto nos permite garantizar un servicio de calidad superior y asegurar la <strong class="text-azul">satisfacción total</strong> de quienes confían en nosotros para transportar sus cargas.
+          </p>
+        </div>
 
-      <!-- Llamada a la acción -->
-      <div class="mt-6 flex justify-center md:justify-start">
-        <a
-          href="#"
-          class="bg-azulClaro text-[#fff] py-3 px-8 rounded-lg hover:bg-azulClaro/90 transition duration-300"
-        >
-          Conoce nuestros servicios
-        </a>
+        <!-- Llamada a la acción -->
+        <div class="mt-6 flex justify-center lg:justify-start">
+          <a
+            href="/Servicios"
+            class="bg-azul text-blanco py-3 px-8 rounded-xl font-semibold hover:bg-azul/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
+          >
+            Conocé nuestros servicios
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Imagen -->
-    <div
-      id="camion"
-      class="w-full md:w-1/2 h-[250px] md:h-[500px] bg-center bg-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out hover:scale-105"
-      style={`background-image: url(${camionImg.src});`}
-    >
-    </div>
-  </section>
+      <!-- Imagen -->
+      <div class="w-full lg:w-1/2">
+        <div class="relative h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl">
+          <div
+            class="w-full h-full bg-center bg-cover"
+            style={`background-image: url(${camionImg.src});`}
+          ></div>
+          <!-- Overlay sutil -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+        </div>
+      </div>
+    </section>
+  </div>
 </div>

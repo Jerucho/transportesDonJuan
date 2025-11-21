@@ -18,13 +18,15 @@ import NuestraHistoria from "../components/NuestraHistoria/NuestraHistoria.astro
 import Testimonio from "../components/Testimonio/Testimonio.astro";
 ---
 
-<WebLayout title="Tranportes Don Juan">
+<WebLayout 
+  title="Transportes Don Juan - Transporte de Cargas Nacional en Argentina | Fletes y Logística"
+  description="Transportes Don Juan te ofrece el mejor servicio de transporte de cargas en Argentina. Especialistas en transporte nacional, carga paletizada, corta y larga distancia. Cotizá tu envío gratis y confiá en profesionales del transporte."
+  keywords="transporte de cargas Argentina, fletes nacionales, logística Argentina, transporte paletizado, envío de mercadería, transporte corta distancia, transporte larga distancia, Transportes Don Juan, fletes Buenos Aires"
+>
   <Navbar color="black" />
   <Banner background_position="object-left" background_image={banner.src}>
     <BannerHomeContent />
-  </Banner>
-
-  <SolicitarCotizacion />
+  </Banner><SolicitarCotizacion />
   <ContactInfo />
   <NuestrosServicios />
   <NuestraHistoria />

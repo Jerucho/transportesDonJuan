@@ -5,7 +5,7 @@ const { color = "light" } = Astro.props;
 ---
 
 <nav
-  class="w-full flex justify-center items-center h-[100px] px-[5%] absolute top-0 z-50 transition-all duration-300"
+  class="w-full flex justify-center items-center h-16 md:h-20 px-4 md:px-6 lg:px-8 absolute top-0 z-50 transition-all duration-300"
   id="navbar"
 >
   <script type="module">
@@ -34,51 +34,53 @@ const { color = "light" } = Astro.props;
     });
   </script>
 
-  <div>
-    <a href="/">
-      <Image
-        src={logo}
-        alt="Logo de Transportes Don Juan"
-        width="356"
-        height="100"
-        id="logo-transportes-don-juan"
-        class="w-[100%]"
-      />
-    </a>
-  </div>
+  <div class="flex items-center justify-between w-full max-w-container mx-auto">
+    <div class="flex-shrink-0">
+      <a href="/">
+        <Image
+          src={logo}
+          alt="Logo de Transportes Don Juan"
+          width="252"
+          height="72"
+          id="logo-transportes-don-juan"
+          class="h-11 md:h-14 w-auto"
+        />
+      </a>
+    </div>
 
-  <div>
-    <button id="burguer" class="text-blanco text-3xl md:hidden pl-[15px]">
-      <i class="fa-solid fa-align-justify"></i>
-    </button>
-  </div>
+    <div>
+      <button id="burguer" class="text-blanco text-2xl md:hidden">
+        <i class="fa-solid fa-align-justify"></i>
+      </button>
+    </div>
 
-  <ul
-    class="translate-x-[-120%] md:translate-x-0 absolute flex p-[30px] flex-col transition-all top-[100px] gap-[20px] md:gap-[30px] bg-azul md:bg-opacity-0 md:justify-end md:p-0 w-full text-blanco md:flex-row md:relative md:top-0 md:text-xl"
-  >
-    <li>
-      <a
-        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300`}
-        href="/">Inicio</a
-      >
-    </li>
-    <li>
-      <a
-        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300`}
-        href="/Servicios">Servicios</a
-      >
-    </li>
-    <li>
-      <a
-        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300`}
-        href="/SobreNosotros">Sobre Nosotros</a
-      >
-    </li>
-    <li>
-      <a
-        class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300`}
-        href="/">Contacto</a
-      >
-    </li>
-  </ul>
+    <ul
+      class="translate-x-[-120%] md:translate-x-0 absolute flex p-5 flex-col transition-all top-16 md:top-0 gap-3 md:gap-5 lg:gap-6 bg-azul md:bg-opacity-0 md:justify-end md:p-0 w-full text-blanco md:flex-row md:relative md:text-sm lg:text-base"
+    >
+      <li>
+        <a
+          class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300`}
+          href="/">Inicio</a
+        >
+      </li>
+      <li>
+        <a
+          class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300`}
+          href="/Servicios">Servicios</a
+        >
+      </li>
+      <li>
+        <a
+          class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300`}
+          href="/SobreNosotros">Sobre Nosotros</a
+        >
+      </li>
+      <li>
+        <a
+          class={`${color == "light" ? "text-[#000]" : "text-blanco"} hover:text-azulClaro transition-colors duration-300`}
+          href="/">Contacto</a
+        >
+      </li>
+    </ul>
+  </div>
 </nav>

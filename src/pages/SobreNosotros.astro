@@ -12,18 +12,22 @@ import WhatsAppBtn from "../components/WhatsAppBtn/WhatsAppBtn.astro";
 ---
 
 <WebLayout
-  ><Navbar color="black" />
+  title="Sobre Nosotros | Transportes Don Juan - Empresa de Transporte de Cargas en Argentina"
+  description="Conocé la historia y valores de Transportes Don Juan. Empresa familiar con años de experiencia en transporte de cargas en Argentina. Comprometidos con la seguridad, puntualidad y excelencia en logística."
+  keywords="sobre nosotros Transportes Don Juan, empresa transporte cargas Argentina, historia empresa logística, valores empresa transporte, misión visión transporte"
+>
+  <Navbar color="black" />
   <Banner background_position="object-center" background_image={banner.src}>
-    <>
-      <div class="flex flex-col justify-center h-[80vh] px-[5%]">
-        <h1 class="text-5xl font-bold text-blanco md:text-6xl">
+    <div class="flex flex-col items-end justify-center h-full px-6 md:px-12 lg:px-20 xl:px-24">
+      <div class="max-w-2xl text-right">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-blanco leading-tight drop-shadow-2xl mb-4">
           Sobre Nosotros
         </h1>
-        <p class="max-w-[80%] mt-4 text-blanco text-3xl md:text-4xl">
-          Misión y Visión
+        <p class="text-blanco/90 text-lg md:text-xl lg:text-2xl font-light leading-relaxed">
+          Comprometidos con la excelencia en transporte de cargas en Argentina
         </p>
       </div>
-    </>
+    </div>
   </Banner>
   <SolicitarCotizacion />
   <SobreNosotrosCard />

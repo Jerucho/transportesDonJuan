@@ -4,39 +4,48 @@ import SobreNosotrosItem from "./SobreNosotrosItem.astro";
 import sobreNosotrosImg from "../../assets/SobreNosotros.png";
 ---
 
-<section
-  class="w-full flex flex-col md:flex-row mt-[100px] h-auto md:h-[80vh] px-[5%]"
->
-  <!-- Imagen a la izquierda -->
-  <div
-    class="w-full md:w-1/2 h-[300px] md:h-full bg-center bg-cover"
-    style={`background-image: url(${sobreNosotrosImg.src});`}
-  >
-  </div>
+<section class="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-white via-gray-50/30 to-white">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
+      <!-- Imagen a la izquierda -->
+      <div class="w-full lg:w-[45%] rounded-2xl overflow-hidden shadow-xl flex">
+        <div
+          class="w-full h-full min-h-[400px] lg:min-h-full bg-center bg-cover"
+          style={`background-image: url(${sobreNosotrosImg.src});`}
+        ></div>
+      </div>
 
-  <!-- Cards a la derecha -->
-  <div class="w-full md:w-1/2 flex items-center justify-center">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 w-full h-full">
-      <SobreNosotrosItem
-        icon="fa-solid fa-shield"
-        title="Seguridad"
-        text="Ofrecemos seguridad a todos nuestros clientes, brindándoles apoyo y soporte en todo momento."
-      />
-      <SobreNosotrosItem
-        icon="fa-solid fa-bolt"
-        title="Velocidad"
-        text="Una rápida atención a todos nuestros clientes, eso nos hace diferentes."
-      />
-      <SobreNosotrosItem
-        icon="fa-solid fa-location-pin"
-        title="Precisión"
-        text="Contamos con seguimiento puntual para garantizar entregas en tiempo y forma."
-      />
-      <SobreNosotrosItem
-        icon="fa-solid fa-headset"
-        title="Soporte"
-        text="Atención personalizada y acompañamiento constante a cada cliente."
-      />
+      <!-- Cards a la derecha -->
+      <div class="w-full lg:w-[55%] flex flex-col justify-between">
+        <div class="mb-8">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            Nuestros Valores
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-azul to-azulClaro rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1">
+          <SobreNosotrosItem
+            icon="fa-solid fa-shield"
+            title="Seguridad"
+            text="Garantizamos la seguridad de tu carga en cada viaje. Contamos con seguros completos y protocolos de seguridad que protegen tu mercadería desde el origen hasta el destino."
+          />
+          <SobreNosotrosItem
+            icon="fa-solid fa-bolt"
+            title="Eficiencia"
+            text="Atención rápida y respuesta inmediata. Nuestro equipo está preparado para brindarte soluciones logísticas eficientes que optimizan tus tiempos y costos."
+          />
+          <SobreNosotrosItem
+            icon="fa-solid fa-location-pin"
+            title="Puntualidad"
+            text="Seguimiento en tiempo real y entregas puntuales. Nos comprometemos a cumplir con los plazos acordados, porque sabemos que tu tiempo es valioso."
+          />
+          <SobreNosotrosItem
+            icon="fa-solid fa-headset"
+            title="Atención Personalizada"
+            text="Soporte dedicado y acompañamiento constante. Cada cliente es único y merece un trato personalizado que se adapte a sus necesidades específicas."
+          />
+        </div>
+      </div>
     </div>
   </div>
 </section>

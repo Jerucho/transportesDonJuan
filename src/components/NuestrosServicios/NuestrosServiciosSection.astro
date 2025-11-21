@@ -9,40 +9,35 @@ import {
 import Title from "../Title/Title.astro";
 ---
 
-<section
-  style={{
-    margin: "100px 0",
-  }}
->
-  <Title title="Nuestros Servicios" />
-  <div
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      margin: "50px 0",
-      gap: "20px",
-    }}
-  >
+<section class="py-16 md:py-20 lg:py-24 bg-white">
+  <div class="max-w-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="text-center mb-12 md:mb-16">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        Nuestros Servicios
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-azul to-azulClaro mx-auto rounded-full"></div>
+    </div>
+    <div class="flex flex-col items-center gap-6">
     <div
-      class="flex flex-col md:flex-row px-[5%] mx-[100px] gap-[20px] justify-between w-full"
+      class="flex flex-col md:flex-row px-4 md:px-6 lg:px-8 gap-6 md:gap-8 justify-between w-full max-w-container mx-auto"
     >
       <ServiceCardMini
         title="Transporte Nacional"
-        description="Servicio de transporte de cargas generales a nivel nacional, con cobertura en las principales rutas del país."
+        description="Servicio de transporte de cargas generales a nivel nacional en Argentina, con cobertura en las principales rutas del país. Llegamos a todas las provincias."
         icon={faTruck}
       />
       <ServiceCardMini
         title="Carga Paletizada"
-        description="Especialistas en el transporte de mercadería paletizada, asegurando la integridad de su carga durante todo el trayecto."
+        description="Especialistas en el transporte de mercadería paletizada en Argentina, asegurando la integridad de tu carga durante todo el trayecto. Servicio profesional y confiable."
         icon={faBoxesStacked}
       />
       <ServiceCardMini
         title="Corta y Larga Distancia"
-        description="Servicios de transporte para distancias cortas y largas, adaptándonos a las necesidades específicas de cada cliente."
+        description="Servicios de transporte para distancias cortas y largas en toda Argentina. Nos adaptamos a tus necesidades logísticas con la mejor relación precio-calidad."
         icon={faRoute}
       />
     </div>
-    <ButtonAction text="Más información" href="" />
+      <ButtonAction text="Más información" href="/Servicios" />
+    </div>
   </div>
 </section>
