@@ -1,5 +1,6 @@
 ---
 import Title from "../Title/Title.astro";
+import camionImg from "../../assets/CamionNuestraHistoria.jpeg";
 ---
 
 <div class="mt-[100px]">
@@ -51,7 +52,8 @@ import Title from "../Title/Title.astro";
     <!-- Imagen -->
     <div
       id="camion"
-      class="w-full md:w-1/2 h-[250px] md:h-[500px] bg-nuestraHistoria bg-center bg-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out hover:scale-105"
+      class="w-full md:w-1/2 h-[250px] md:h-[500px] bg-center bg-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out hover:scale-105"
+      style={`background-image: url(${camionImg.src});`}
     >
     </div>
   </section>

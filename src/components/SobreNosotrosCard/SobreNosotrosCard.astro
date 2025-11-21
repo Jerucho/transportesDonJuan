@@ -1,6 +1,7 @@
 ---
 // Componente padre
 import SobreNosotrosItem from "./SobreNosotrosItem.astro";
+import sobreNosotrosImg from "../../assets/SobreNosotros.png";
 ---
 
 <section
@@ -8,7 +9,8 @@ import SobreNosotrosItem from "./SobreNosotrosItem.astro";
 >
   <!-- Imagen a la izquierda -->
   <div
-    class="w-full md:w-1/2 h-[300px] md:h-full bg-sobreNosotros bg-center bg-cover"
+    class="w-full md:w-1/2 h-[300px] md:h-full bg-center bg-cover"
+    style={`background-image: url(${sobreNosotrosImg.src});`}
   >
   </div>
 

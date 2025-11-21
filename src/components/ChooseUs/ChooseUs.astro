@@ -1,5 +1,6 @@
 ---
 import "../../styles/fadeInAnimation.css";
+import operario from "../../assets/operario.webp";
 ---
 
 <section
@@ -9,7 +10,7 @@ import "../../styles/fadeInAnimation.css";
   <div class="w-full md:w-1/2">
     <div
       class="w-full h-[250px] md:h-[500px] bg-cover bg-center rounded-lg shadow-md"
-      style="background-image: url('/src/assets/operario.webp');"
+      style={`background-image: url(${operario.src});`}
     >
     </div>
   </div>
